@@ -38,27 +38,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Glowing animated border effect using :after */
-    .button-5:after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: conic-gradient(from 0deg, #ff416c, #ff4b2b, #ff416c);
-      filter: blur(20px);
-      opacity: 0;
-      transition: opacity 0.5s;
-    }
-    .button-5:hover:after {
-      opacity: 1;
-      animation: spin 4s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
     /* Shimmering overlay using :before */
     .button-5:before {
       content: "";
