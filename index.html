@@ -1,12 +1,157 @@
 <html>
+  <title>Button Testing</title>
   <body>
-    <div class="1">
-      <h2 class="2">Hi!</h2>
-    </div>
+    <h1 class="text">Button Testing</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Default Button</h3>
+    <button>Click Me!</button>
+    <br>
+    <br>
+    <br>
+    <h3>Not So Fancy Button</h3>
+    <button class="button-2">Click Me!</button>
+    <br>
+    <br>
+    <br>
+    <h3>Fancy Button</h3>
+    <button class="button-3">Click Me!</button>
+    <br>
+    <br>
+    <br>
+    <h3>EVEN FANCIER BUTTON!!</h3>
+    <button class="button-4">Click Me!</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="text">Click <a href="theFancyButton.html">HERE</a> to see the FANCIEST BUTTON EVER!!</h1>
   </body>
-  <style>
-    .1 {
-      background: linear-gradient(45deg, rgb(0, 145, 145), rgb(145, 145, 0));
-    }
-  </style>
 </html>
+<style>
+  .text {
+    color: brown;
+    text-decoration: bold;
+    text-shadow: 0cqmax;
+    text-align: center;
+    font-size: 50px;
+  }
+  body {
+    background-color: lightblue;
+  }
+  .button-2 {
+    background-color: lightgreen;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  .button-3 {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #fff;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.button-3:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.button-3:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.button-4 {
+  display: inline-block;
+  position: relative;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b, #ff416c);
+  background-size: 300% 300%;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Animate the gradient on hover */
+.button-4:hover {
+  animation: gradientShift 3s ease infinite;
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Keyframes for shifting the gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Pseudo-element for a subtle radial shimmer effect */
+.button-4:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10%);
+  background-size: 50px 50px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.button-4:hover:before {
+  opacity: 1;
+}
+
+/* Underline effect on hover */
+.button-4:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.button-4:hover:after {
+  width: 80%;
+}
+
+/* Active state for a pressing effect */
+.button-4:active {
+  transform: scale(0.95);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+</style>
